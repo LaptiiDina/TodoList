@@ -1,5 +1,5 @@
 Installation:
-git clone https://github.com/your-repo/todo-list-app.git
+git clone https://github.com/LaptiiDina/TodoList.git
 
 Install the dependencies:
 npm install or npm i
