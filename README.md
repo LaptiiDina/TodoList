@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+Installation:
+git clone https://github.com/your-repo/todo-list-app.git
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Install the dependencies:
+npm install or npm i
 
-## Available Scripts
+Usage
+Start the development server: npm start
 
-In the project directory, you can run:
+To build the project for production:
+npm run build
 
-### `npm start`
+TodoList
+The main component that renders the list of todos and handles adding, toggling, and deleting todos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+TodoItem
+A component that renders a single todo item with options to toggle its completion status.
+Props:
+todo: An object representing a todo with id, description, and completed properties.
+toggleComplete: Function to toggle the completion status of the todo.
+deleteTodo: Function to delete tasks from todo list and local storage
 
-### `npm test`
+TodoFilter
+A component that allows filtering the todos based on their completion status.
+Props:
+filter: The current filter status ('all' | 'active' | 'completed').
+setFilter: Function to set the filter status.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Testing
+To run the tests: npm test
 
-### `npm run build`
+Available Tests:
+Adding new tasks
+Marking tasks as completed
+Filtering tasks
+Filter active tasks
+Persist state between reloads
+Adding multiple tasks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+todo-list-mfe/
+├── node_modules/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── TodoItem.tsx
+│   │   ├── TodoFilter.tsx
+│   │   └── TodoList.tsx
+│   ├── hooks/
+│   │   └── useLocalStorage.ts
+│   ├── tests/
+│   │   └── TodoList.test.tsx
+│   ├── index.tsx
+├── .gitignore
+├── package.json
+├── README.md
+└── tsconfig.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Notes
+Ensure that node_modules is not included when sending the application for review.
+All required dependencies should be listed in package.json.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
